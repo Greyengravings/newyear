@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Container for the Card Page -->
+    <div class="card-background-container">
+        <!-- The Card -->
+        <div class="card" onclick="this.classList.toggle('open')">
+            <div class="card-front">
+                <h2>Click to open</h2>
+            </div>
+            <div class="card-back">
+                <h2>Happy New Year <span id="name"></span>, Wishing you a year filled with happiness, health, and success. May this year bring you lots of love, laughter, and wonderful memories. Here’s to new beginnings and making the most of every moment!
+                    Cheers to a fantastic year ahead!</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Grab the query parameter from the URL (if available)
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name'); // Name is passed as a query parameter
+        document.getElementById("name").textContent = userName || "Guest";  // Fallback if name is not available
+    </script>
+</body>
+</html>
