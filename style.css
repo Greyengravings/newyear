@@ -156,7 +156,7 @@ body {
     background-color: #7016b9;  /* Green color for the back */
     color: white;
     transform: rotateY(180deg);
-    font-size: 18px;
+    font-size: 12px;
     padding: 30px;
     text-align: center;
 }
